@@ -1,0 +1,25 @@
+# Dataloader
+pickles_path: [
+  "./datasets/cifar10/data_batch_1",
+  "./datasets/cifar10/data_batch_2",
+  "./datasets/cifar10/data_batch_3",
+  "./datasets/cifar10/data_batch_4",
+  "./datasets/cifar10/data_batch_5",
+]
+preprocessing_method: "normalized"
+batch_size: 100
+
+# MLP
+n_nodes: [3072,50, 25,10]
+act_func_list: ["relu", "relu", "identity"]
+lr: 0.0001
+l2_reg_coef: 0
+
+# Loss
+loss_type: "softmax_cross_entropy"
+
+# Training:
+num_epochs: 50
+
+# Report
+report_path: "./report.csv"
